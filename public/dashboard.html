@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ESP Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ESP Dashboard</h1>
+    <div>
+      <button id="btn-logout">Logout</button>
+    </div>
+    <div>
+      <h3>Your Devices</h3>
+      <ul id="device-list"></ul>
+
+      <h3>Claim/Add Device</h3>
+      <input id="esp-id" placeholder="ESP ID (unique)"><input id="esp-label" placeholder="Label">
+      <button id="btn-add">Add/Claim</button>
+    </div>
+
+    <div id="controls" style="display:none;">
+      <h3 id="device-title">Device:</h3>
+      <div id="pins"></div>
+    </div>
+
+    <div id="status"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
